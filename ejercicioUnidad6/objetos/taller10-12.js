@@ -66,42 +66,50 @@ ciruclo.saludar();
 /*TALLER 12*/
 class Persona {
   constructor(nombre, apellido, edad, nacionalidad) {
-    this.nombre = null;
-    this.apellido = null;
-    this.edad = null;
-    this.nacionalidad = null;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.nacionalidad = nacionalidad;
+  }
+
+  static numPerson() {
+    console.log("Hay 8.010.359.063 personas en el mundo");
+  }
+
+  get getNombre() {
+    return this.nombre;
+  }
+  set setNombre(nombre) {
+    this.nombre = nombre;
+  }
+
+  get getApellido() {
+    return this.apellido;
+  }
+  set setApellido(apellido) {
+    this.apellido = apellido;
+  }
+
+  get getEdad() {
+    return this.edad;
+  }
+  set setEdad(edad) {
+    this.edad = edad;
+  }
+
+  get getNacionalidad() {
+    return this.nacionalidad;
+  }
+  set setNacionalidad(nacionalidad) {
+    this.nacionalidad = nacionalidad;
   }
 }
+//Asignando valores o setando los predefinidos
+const person = new Persona("Cristian", "Montealegre", 25, "Colombiano");
+//Mostrando valores
+console.log(person.getNombre);
+console.log(person.getApellido);
+console.log(person.getEdad);
+console.log(person.getNacionalidad);
 
-class Persona1 extends Persona{
-    constructor(nombre, apellido, edad, nacionalidad){
-        this.nombre=nombre
-        this.apellido=apellido
-        this.edad=edad
-        this.nacionalidad=nacionalidad
-    }
-    set setNombre(){
-        this.Nombre
-    }
-    get getNombre(){
-        return this.Nombre
-    }
-    set setApellido(){
-        this.Apellido
-    }
-    get getApellido(){
-        return this.Apellido
-    }
-    set setEdad(){
-        this.Edad
-    }
-    get getEdad(){
-        return this.Edad
-    }
-    set setNacionalidad(){
-        this.Nacionalidad
-    }
-    get getNacionalidad(){
-        return this.Nacionalidad
-    }
-}
+Persona.numPerson() 
